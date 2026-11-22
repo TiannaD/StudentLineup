@@ -19,14 +19,28 @@ int main() {
 	string firstName;
 	string lastName;
 
-	string nameCheck;
+	string nameCheck = "";
 
-	while (inputFile >> names) {
-		nameCheck = names;
-		firstName = nameCheck;
-		cout << names << endl;
+	if (inputFile >> names) {
+
+		firstName = names;
+		lastName = names;
+
+		while (inputFile >> names) {
+
+			if (names < firstName) {
+				firstName = names;
+			}
+			if (names > lastName) {
+				lastName = names;
+			}
+
+			count++;
+
+			cout << "First name: " << firstName << endl << "Last name: " << lastName << endl << "Number of students: " << count << endl;
+
+		}
 	}
-	
 
 	return 0;
 }
