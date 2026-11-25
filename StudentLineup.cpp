@@ -13,18 +13,17 @@ int main() {
 	}
 
 	string names;
-	int total = 0;
 	int count = 0;
 
 	string firstName;
 	string lastName;
 
-	string nameCheck = "";
-
 	if (inputFile >> names) {
 
 		firstName = names;
 		lastName = names;
+
+		count++;
 
 		while (inputFile >> names) {
 
@@ -35,11 +34,14 @@ int main() {
 				lastName = names;
 			}
 
+			//cout << "First name: " << firstName << endl << "Last name: " << lastName << endl << "Number of students: " << count << endl;
+
 			count++;
-
-			cout << "First name: " << firstName << endl << "Last name: " << lastName << endl << "Number of students: " << count << endl;
-
+			
 		}
+
+		cout << "First name: " << firstName << endl << "Last name: " << lastName << endl << "Number of students: " << count << endl;
+
 	}
 
 	return 0;
