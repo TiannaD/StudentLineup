@@ -3,6 +3,8 @@
 
 using namespace std;
 
+//This program reads a file as input and takes the first and last alphabetically entries and displays them with the number of records
+
 int main() {
 
 	ifstream inputFile("LineUp.txt");
